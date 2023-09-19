@@ -93,6 +93,25 @@ void setPatron(){
         }
     }
 }
+
+for (int i = 0; i < 4; i++) {
+    for (int j = 0; j < 8; j++) {
+        matriz[i][j] = (j >= 3-i && j <= 4+i) ? 1 : 0;
+    }
+}
+for (int i = 0; i < 4; i++) {
+    for (int j = 0; j < 8; j++) {
+        matriz[i+4][j] = (j >= i && j < 8-i) ? 1 : 0;
+    }
+}
+
+
+for (int i = 0; i < 8; i++) {
+    for (int j = 0; j < 8; j++) {
+        matriz[i][j] = ((i/2)%2 == 0) ? ((j/2)%2 == 0) : !((j/2)%2 == 0);
+    }
+}
+
 void loop(){
     verificacion();
 }
