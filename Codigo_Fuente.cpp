@@ -3,20 +3,7 @@ const int PinLatch = 12;
 const int PinClock = 13;
 int ContadorBits;
 int matriz[8][8];
-int arreglo[8];
 int option = 0;
-
-
-void store(){
-    digitalWrite(PinLatch, HIGH);
-    digitalWrite(PinLatch, LOW);
-}
-
-
-void ledWrite(int led){
-    shiftOut(PinData, PinClock, MSBFIRST, led);
-    store();
-}
 
 void verificacion();
 void imagen();
